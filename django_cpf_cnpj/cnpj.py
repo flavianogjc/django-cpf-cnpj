@@ -73,7 +73,7 @@ class CNPJ(object):
 
     def format(self):
         var = self.number
-        return var[:3] + '.' + var[3:6] + '.' + var[7:10] + '-' + var[-2:]
+        return var[:2] + '.' + var[2:5] + '.' + var[5:8] + '/' + var[8:12] + '-' + var[-2:]
 
     def is_valid(self):
         return is_valid_cnpj(self.number)
